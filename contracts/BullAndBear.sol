@@ -18,7 +18,6 @@ import "@chainlink/contracts/src/v0.8/KeeperCompatible.sol";
 // Dev imports
 import "hardhat/console.sol";
 
-
 contract BullBear is ERC721, ERC721Enumerable, ERC721URIStorage, KeeperCompatibleInterface, Ownable  {
     using Counters for Counters.Counter;
 
