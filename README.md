@@ -1,15 +1,34 @@
-# Basic Sample Hardhat Project
+# Connect APIs to your Smart Contracts using Chainlink Keppers
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
+## Install the Dependencies and Dotenv
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+npm install
 ```
+## Create .env file
+
+```shell
+RINKEBY_URL=''
+PRIVATE_KEY=''
+ETHERSCAN_API =''
+```
+## Compiling the Smart Contracts
+
+```shell
+npx hardhat compile
+```
+
+## Deploy Smart Contracts on Rinkeby Network
+
+```shell
+npx hardhat run --network rinkeby scripts/deploy.js
+```
+
+## Verify Smart Contracts on Etherscan
+
+```shell
+npx hardhat verify --network rinkeby <SMART_CONTRACT_DEPLOYED> "10" "0xECe365B379E1dD183B20fc5f022230C044d51404" "0x6168499c0cFfCaCD319c818142124B7A15E857ab"
+```
+
+## Deployed contracts
+https://rinkeby.etherscan.io/address/0x86B450550049c5A63ab40FA89080D477F2184EC4#code
